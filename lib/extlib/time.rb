@@ -22,8 +22,8 @@ class Time
   #
   # @return [Time] Receiver
   #
-  # @api public
-  remove_method :to_time if method_defined?(:to_time) || private_method_defined?(:to_time)
+  # @api public 
+  remove_method :to_time if instance_methods.include?(:to_time)
   def to_time
     self
   end
